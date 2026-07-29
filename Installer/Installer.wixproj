@@ -1,5 +1,8 @@
 <Project Sdk="WixToolset.Sdk/7.0.0">
   <PropertyGroup>
+    <AcceptEula>wix7</AcceptEula>
+  </PropertyGroup>
+  <PropertyGroup>
     <Platform>x86</Platform>
     <SuppressIces>ICE80</SuppressIces>
   </PropertyGroup>
