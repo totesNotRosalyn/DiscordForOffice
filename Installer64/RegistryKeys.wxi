@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Include>
-	<Component Guid="*" Win64="no">
+﻿<Include xmlns="http://wixtoolset.org/schemas/v4/wxs">
+	<Component Bitness="always32">
 		<RegistryValue Id="Excel_RegKey_FriendlyName" Root="HKLM" Key="Software\Microsoft\Office\Excel\AddIns\$(var.DiscordForExcel.TargetName)" Name="FriendlyName" Value="DiscordForExcel" Type="string" />
 		<RegistryValue Id="Excel_RegKey_Description" Root="HKLM" Key="Software\Microsoft\Office\Excel\AddIns\$(var.DiscordForExcel.TargetName)" Name="Description" Value="Excel yourself to your friends with DiscordForOffice" Type="string" />
 		<RegistryValue Id="Excel_RegKey_Manifest" Root="HKLM" Key="Software\Microsoft\Office\Excel\AddIns\$(var.DiscordForExcel.TargetName)" Name="Manifest" Value="[INSTALLFOLDER]$(var.DiscordForExcel.TargetName).vsto|vstolocal" Type="string" />
@@ -23,7 +22,7 @@
 	</Component>
 
 	<?if $(var.Platform) = x64 ?>
-		<Component Guid="*" Win64="yes">
+		<Component Bitness="always64">
 			<RegistryValue Id="AMD_Excel_RegKey_FriendlyName" Root="HKLM" Key="Software\Microsoft\Office\Excel\AddIns\$(var.DiscordForExcel.TargetName)" Name="FriendlyName" Value="DiscordForExcel" Type="string" />
 			<RegistryValue Id="AMD_Excel_RegKey_Description" Root="HKLM" Key="Software\Microsoft\Office\Excel\AddIns\$(var.DiscordForExcel.TargetName)" Name="Description" Value="Excel yourself to your friends with DiscordForOffice" Type="string" />
 			<RegistryValue Id="AMD_Excel_RegKey_Manifest" Root="HKLM" Key="Software\Microsoft\Office\Excel\AddIns\$(var.DiscordForExcel.TargetName)" Name="Manifest" Value="[INSTALLFOLDER]$(var.DiscordForExcel.TargetName).vsto|vstolocal" Type="string" />
@@ -44,6 +43,6 @@
 			<RegistryValue Id="AMD_Word_RegKey_Manifest" Root="HKLM" Key="Software\Microsoft\Office\Word\AddIns\$(var.DiscordForWord.TargetName)" Name="Manifest" Value="[INSTALLFOLDER]$(var.DiscordForWord.TargetName).vsto|vstolocal" Type="string" />
 			<RegistryValue Id="AMD_Word_RegKey_LoadBehavior" Root="HKLM" Key="Software\Microsoft\Office\Word\AddIns\$(var.DiscordForWord.TargetName)" Name="LoadBehavior" Value="3" Type="integer" />
 		</Component>
-	<?endif ?>
+	<?endif?>
 
 </Include>
